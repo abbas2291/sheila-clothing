@@ -253,7 +253,7 @@
 
 @media (max-width: 900px) {
   .navContainer {
-    padding: 0 var(--space-lg) 0 var(--space-md);
+    padding: 0 20px;
   }
 
   .navLinks {
@@ -266,6 +266,6 @@
 
   .hamburger {
     display: flex;
-    margin-right: 4px;
+    margin-right: 0;
   }
 }
