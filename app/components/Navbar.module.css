@@ -137,6 +137,9 @@
   cursor: pointer;
   z-index: 1001;
   -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  user-select: none;
   flex-shrink: 0;
 }
 

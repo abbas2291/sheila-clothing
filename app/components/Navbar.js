@@ -65,16 +65,18 @@ export default function Navbar() {
           Book Now
         </Link>
 
-        <button
+        <div
           className={`${styles.hamburger} ${menuOpen ? styles.open : ''}`}
           onClick={() => setMenuOpen(!menuOpen)}
+          role="button"
+          tabIndex={0}
           aria-label="Toggle menu"
           id="nav-hamburger"
         >
           <span></span>
           <span></span>
           <span></span>
-        </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
