@@ -129,57 +129,20 @@
 /* Hamburger */
 .hamburger {
   display: none;
-  position: relative;
-  width: 44px;
-  height: 44px;
-  background: none;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: transparent;
   border: none;
   cursor: pointer;
   z-index: 1001;
   -webkit-tap-highlight-color: transparent;
-  -webkit-appearance: none;
-  appearance: none;
-  user-select: none;
   flex-shrink: 0;
-}
-
-.hamburger span {
-  display: block;
-  position: absolute;
-  left: 8px;
-  width: 28px;
-  height: 3px;
-  background: var(--color-gold);
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-.hamburger span:nth-child(1) {
-  top: 12px;
-}
-
-.hamburger span:nth-child(2) {
-  top: 21px;
-}
-
-.hamburger span:nth-child(3) {
-  top: 30px;
-}
-
-.hamburger.open span:nth-child(1) {
-  top: 21px;
-  transform: rotate(45deg);
-  background: var(--color-gold-light);
-}
-
-.hamburger.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.open span:nth-child(3) {
-  top: 21px;
-  transform: rotate(-45deg);
-  background: var(--color-gold-light);
+  font-size: 28px;
+  color: #c9a96e;
+  line-height: 1;
+  user-select: none;
 }
 
 /* Mobile Menu */
@@ -283,6 +246,6 @@
   }
 
   .hamburger {
-    display: block;
+    display: flex;
   }
 }

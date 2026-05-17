@@ -66,16 +66,14 @@ export default function Navbar() {
         </Link>
 
         <div
-          className={`${styles.hamburger} ${menuOpen ? styles.open : ''}`}
+          className={styles.hamburger}
           onClick={() => setMenuOpen(!menuOpen)}
           role="button"
           tabIndex={0}
           aria-label="Toggle menu"
           id="nav-hamburger"
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          {menuOpen ? '✕' : '☰'}
         </div>
       </div>
 
