@@ -78,7 +78,7 @@ export default function Footer() {
           <div className={styles.footerColumn}>
             <h4 className={styles.footerHeading}>Visit Us</h4>
             <div className={styles.contactInfo}>
-              <div className={styles.contactItem}>
+              <a href="https://www.google.com/maps/search/Chinatown+Complex+01-154+Singapore+050335" target="_blank" rel="noopener noreferrer" className={styles.contactItem}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" strokeWidth="2">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
                   <circle cx="12" cy="10" r="3"/>
@@ -87,13 +87,13 @@ export default function Footer() {
                   <p>#01-154 Chinatown Complex</p>
                   <p>Singapore 050335</p>
                 </div>
-              </div>
-              <div className={styles.contactItem}>
+              </a>
+              <a href="tel:+6585019131" className={styles.contactItem}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" strokeWidth="2">
                   <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
                 </svg>
                 <p>+65 8501 9131</p>
-              </div>
+              </a>
               <div className={styles.contactItem}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" strokeWidth="2">
                   <circle cx="12" cy="12" r="10"/>

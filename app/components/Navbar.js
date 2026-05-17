@@ -95,8 +95,8 @@ export default function Navbar() {
             Book an Appointment
           </Link>
           <div className={styles.mobileContact}>
-            <p>+65 8501 9131</p>
-            <p>#01-154 Chinatown Complex</p>
+            <a href="tel:+6585019131">+65 8501 9131</a>
+            <a href="https://www.google.com/maps/search/Chinatown+Complex+01-154+Singapore+050335" target="_blank" rel="noopener noreferrer">#01-154 Chinatown Complex</a>
           </div>
         </div>
       </div>
