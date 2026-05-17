@@ -1,0 +1,208 @@
+/* Page Hero */
+.pageHero {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.heroImage {
+  object-fit: cover;
+  filter: brightness(0.25) saturate(0.7);
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10,10,26,0.3) 0%, rgba(10,10,26,0.7) 70%, rgba(10,10,26,1) 100%);
+  z-index: 2;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: var(--space-xl);
+  padding-top: var(--nav-height);
+}
+
+.heroSub {
+  font-family: var(--font-elegant);
+  font-size: 1.2rem;
+  color: var(--color-text-secondary);
+  margin-top: var(--space-md);
+}
+
+/* Gallery */
+.gallerySection {
+  padding: var(--space-5xl) 0;
+  background: var(--color-midnight);
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  grid-auto-rows: 300px;
+}
+
+.galleryItem.large {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.galleryItem.medium {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.galleryCard {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  height: 100%;
+}
+
+.galleryImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow), filter var(--transition-smooth);
+}
+
+.galleryCard:hover .galleryImage {
+  transform: scale(1.08);
+  filter: brightness(0.7);
+}
+
+.galleryOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-xl);
+  background: linear-gradient(to top, rgba(10, 10, 26, 0.9) 0%, transparent 100%);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all var(--transition-smooth);
+}
+
+.galleryCard:hover .galleryOverlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.galleryCategory {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  background: rgba(201, 169, 110, 0.15);
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: var(--space-sm);
+}
+
+.galleryTitle {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--color-cream);
+}
+
+/* Transform */
+.transformSection {
+  padding: var(--space-5xl) 0;
+  background: linear-gradient(180deg, var(--color-midnight), var(--color-charcoal));
+}
+
+.transformGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.transformCard {
+  text-align: center;
+  padding: var(--space-2xl);
+  background: rgba(30, 30, 50, 0.5);
+  border: 1px solid rgba(201, 169, 110, 0.08);
+  border-radius: var(--radius-lg);
+  position: relative;
+  transition: all var(--transition-smooth);
+}
+
+.transformCard:hover {
+  border-color: rgba(201, 169, 110, 0.2);
+  transform: translateY(-4px);
+}
+
+.transformIcon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: var(--space-lg);
+}
+
+.transformStep {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-gold);
+  margin-bottom: var(--space-md);
+}
+
+.transformDesc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.transformArrow {
+  display: none;
+}
+
+/* CTA */
+.ctaSection {
+  padding: var(--space-5xl) 0;
+  background: var(--color-charcoal);
+}
+
+.ctaCard {
+  text-align: center;
+  background: linear-gradient(135deg, rgba(30, 30, 50, 0.8), rgba(22, 33, 62, 0.5));
+  border: 1px solid rgba(201, 169, 110, 0.12);
+  border-radius: var(--radius-xl);
+  padding: var(--space-4xl);
+}
+
+.ctaCard p {
+  font-family: var(--font-elegant);
+  font-size: 1.15rem;
+  color: var(--color-text-secondary);
+  max-width: 500px;
+  margin: var(--space-lg) auto var(--space-2xl);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .galleryGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 250px;
+  }
+  .galleryItem.large { grid-column: span 2; }
+  .transformGrid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .galleryGrid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 250px;
+  }
+  .galleryItem.large { grid-column: span 1; }
+  .ctaCard { padding: var(--space-2xl); }
+}
